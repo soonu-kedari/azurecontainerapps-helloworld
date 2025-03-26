@@ -4,7 +4,10 @@ const morgan = require('morgan');
 const app = express();
 app.use(morgan('combined'));
 
-const date = new Date();
+function myFunction() {
+  var x = document.lastModified;
+  document.getElementById("TestText").innerHTML = new Date(document.lastModified).toISOString().substr(11, 8);
+}
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html')
