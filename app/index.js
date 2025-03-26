@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const app = express();
 app.use(morgan('combined'));
 
+const date = new Date();
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html')
